@@ -11,7 +11,5 @@ content:
   cache:
     enabled: true
 ui:
-  custom:
-    styles:
-      - url: ui/css/custom.css
-  bundle:
+    bundle:
+      url: https://github.com/Dom-Caracappa/the-tech-manual/blob/b026fae7896eb412fcc87dea6c4f43f6d48c18ed/ui.zip
