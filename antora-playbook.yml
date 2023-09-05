@@ -1,15 +1,23 @@
 #antora-playbook.yml
-
-name: the-tech-manual
-title: Star Trek: The Next Generation: Technical Manual (ST:TNG TM)
-version: '1.0'
-start_page: introduction::index.adoc
+site:
+  title: The Technical Manual
+  # the 404 page and sitemap files only get generated when the url property is set
+  #url: https://antora.gitlab.io/demo/docs-site
+  start_page: chapter_0::introduction::index.adoc
 content:
   sources:
-    - url: https://github.com/Dom-Caracappa/the-tech-manual.git
-      branches: ['main']
-  cache:
-    enabled: true
+  - url: https://github.com/Dom-Caracappa/the-tech-manual.git
+    branches: HEAD
+    # setting edit_url to false disables the Edit this Page link for any page that originates from this repository
+    # the same thing can be achieved by adding empty credentials (i.e., @) in front of the domain in the URL
+    edit_url: false
+asciidoc:
+  attributes:
+    experimental: ''
+    idprefix: ''
+    idseparator: '-'
+    page-pagination: ''
 ui:
-    bundle:
-      url: https://github.com/Dom-Caracappa/the-tech-manual/blob/b026fae7896eb412fcc87dea6c4f43f6d48c18ed/ui.zip
+  bundle:
+    url: https://github.com/Dom-Caracappa/the-tech-manual/blob/2f946ffab686aad0faa37186713ca39776fbe473/ui.zip
+    snapshot: true
