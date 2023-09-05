@@ -1,0 +1,17 @@
+#antora-playbook.yml
+
+name: the-tech-manual
+title: Star Trek: The Next Generation: Technical Manual (ST:TNG TM)
+version: '1.0'
+start_page: introduction::index.adoc
+content:
+  sources:
+    - url: https://github.com/Dom-Caracappa/the-tech-manual.git
+      branches: ['main']
+  cache:
+    enabled: true
+ui:
+  custom:
+    styles:
+      - url: ui/css/custom.css
+  bundle:
